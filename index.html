@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WizAud - Smart Contract Security Revolution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: linear-gradient(135deg, #0a1a1a 0%, #1a2e3a 50%, #2a4a5a 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            backdrop-filter: blur(10px);
+            background: rgba(10, 26, 26, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(64, 224, 208, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(64, 224, 208, 0.4);
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(64, 224, 208, 0.6));
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(64, 224, 208, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(64, 224, 208, 0.8);
+                transform: scale(1.02);
+            }
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #40e0d0, #00ced1, #5f9ea0);
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .beta-badge {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 15px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(64, 224, 208, 0.15) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ffffff 0%, #40e0d0 50%, #00ced1 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+
+        .stat-card {
+            background: rgba(64, 224, 208, 0.1);
+            border: 1px solid rgba(64, 224, 208, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(64, 224, 208, 0.8);
+            box-shadow: 0 10px 30px rgba(64, 224, 208, 0.3);
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #40e0d0;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            padding: 80px 0;
+            background: rgba(64, 224, 208, 0.05);
+            border-radius: 40px;
+            margin: 80px 0;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(64, 224, 208, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(64, 224, 208, 0.2);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .tool-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0a1a1a;
+            overflow: hidden;
+        }
+
+        .tool-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .tool-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #40e0d0;
+        }
+
+        .tool-type {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tool-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #40e0d0 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(64, 224, 208, 0.15) 0%, rgba(64, 224, 208, 0.05) 100%);
+            border: 1px solid rgba(64, 224, 208, 0.3);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(64, 224, 208, 0.2);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #40e0d0, #00ced1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0a1a1a;
+        }
+
+        .feature-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* Email Capture Section */
+        .email-capture {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(64, 224, 208, 0.15) 0%, rgba(0, 206, 209, 0.15) 100%);
+            border-radius: 40px;
+            margin: 80px 0;
+            position: relative;
+        }
+
+        .email-capture::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #40e0d0, #00ced1, #5f9ea0, #40e0d0);
+            border-radius: 42px;
+            z-index: -1;
+            animation: borderRotate 3s linear infinite;
+        }
+
+        @keyframes borderRotate {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .email-form {
+            display: flex;
+            max-width: 500px;
+            margin: 40px auto 0;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-input {
+            flex: 1;
+            min-width: 280px;
+            padding: 16px 24px;
+            font-size: 16px;
+            font-family: 'Exo 2', sans-serif;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(64, 224, 208, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: #40e0d0;
+            box-shadow: 0 0 20px rgba(64, 224, 208, 0.3);
+        }
+
+        .email-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .notify-btn {
+            padding: 16px 32px;
+            font-size: 16px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #40e0d0, #00ced1);
+            color: #0a1a1a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .notify-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(64, 224, 208, 0.4);
+        }
+
+        .success-message {
+            margin-top: 20px;
+            padding: 15px 25px;
+            background: rgba(64, 224, 208, 0.2);
+            border: 1px solid rgba(64, 224, 208, 0.5);
+            border-radius: 25px;
+            color: #40e0d0;
+            font-weight: 500;
+            display: none;
+        }
+
+        /* 3D Lattice Container */
+        .lattice-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        #lattice-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .email-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .email-input {
+                min-width: auto;
+                width: 100%;
+            }
+            
+            .features-grid, .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Dynamic 3D Lattice Background -->
+    <div class="lattice-container">
+        <canvas id="lattice-canvas"></canvas>
+    </div>
+
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <img src="https://i.postimg.cc/0jFQNXVd/Wiz-Aud-logo.png" alt="WizAud Logo" />
+                </div>
+                <div class="logo-text">WizAud</div>
+                <div class="beta-badge">Closed Beta</div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Smart Contract Security<br>Revolution</h1>
+                    <p class="hero-subtitle">Deploy multi-agent AI that integrates and optimizes multiple smart contract auditing tools into one unified platform. Compress timelines, maximize efficiency, eliminate vulnerabilities.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-number">10x</div>
+                            <div class="stat-label">Faster Audits</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Accuracy Rate</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Cost Reduction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tools-section">
+            <div class="container">
+                <h2 class="section-title">Full Foundry Integration & Security Arsenal</h2>
+                <p class="section-subtitle">Our multi-agent AI orchestrates industry-leading development and auditing tools, creating comprehensive security coverage through foundry integration, static analysis, dynamic testing, advanced fuzzing, and mutation testing.</p>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">
+                                <img src="https://i.postimg.cc/9QYtSy8F/99892494.png" alt="Foundry Logo" />
+                            </div>
+                            <div>
+                                <div class="tool-name">Foundry</div>
+                                <div class="tool-type">Development Toolkit</div>
+                            </div>
+                        </div>
+                        <p class="tool-description">Fast, portable and modular toolkit for Ethereum application development with native testing, deployment, and interaction capabilities.</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">
+                                <img src="https://i.postimg.cc/7LPMybd1/1-8v-Wy-ODlm5-Rl-D-Nv-Y0-WA41-A.png" alt="Slither Logo" />
+                            </div>
+                            <div>
+                                <div class="tool-name">Slither</div>
+                                <div class="tool-type">Static Analysis Framework</div>
+                            </div>
+                        </div>
+                        <p class="tool-description">Python-based static analyzer that detects vulnerabilities and provides visual contract information in seconds.</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">
+                                <img src="https://i.postimg.cc/L6fVtcjP/Screenshot-2025-09-16-141645.png" alt="Octopus Logo" />
+                            </div>
+                            <div>
+                                <div class="tool-name">Octopus</div>
+                                <div class="tool-type">Dynamic Analysis (Fuzzinglab)</div>
+                            </div>
+                        </div>
+                        <p class="tool-description">Fuzzinglab's security analysis framework for blockchain smart contracts and WebAssembly modules with CFG visualization.</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">
+                                <img src="https://i.postimg.cc/gkV439P7/Echidna-logo.png" alt="Echidna Logo" />
+                            </div>
+                            <div>
+                                <div class="tool-name">Echidna Engine</div>
+                                <div class="tool-type">Proprietary Fuzzing FaaS</div>
+                            </div>
+                        </div>
+                        <p class="tool-description">Enhanced Fuzzing-as-a-Service platform with sophisticated grammar-based testing and property-based vulnerability detection.</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">
+                                <img src="https://i.postimg.cc/9fMp3rq3/medusa-logo.png" alt="Medusa Logo" />
+                            </div>
+                            <div>
+                                <div class="tool-name">Medusa Framework</div>
+                                <div class="tool-type">Advanced Fuzzing Engine</div>
+                            </div>
+                        </div>
+                        <p class="tool-description">Next-generation fuzzing with intelligent test case generation, parallel processing, and automated minimization.</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">
+                                <img src="https://i.postimg.cc/NMXRYTsn/Slitherin-logo.png" alt="Slitherin Logo" />
+                            </div>
+                            <div>
+                                <div class="tool-name">Slitherin</div>
+                                <div class="tool-type">Mutation Testing</div>
+                            </div>
+                        </div>
+                        <p class="tool-description">Advanced mutation testing framework that validates test suite effectiveness through controlled code modifications.</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-logo">
+                                <img src="https://i.postimg.cc/VkLf88sQ/Wizkid.png" alt="Wizkid Logo" />
+                            </div>
+                            <div>
+                                <div class="tool-name">Wizkid</div>
+                                <div class="tool-type">Coverage Analysis</div>
+                            </div>
+                        </div>
+                        <p class="tool-description">Proprietary comprehensive coverage aggregator providing unified line, branch, function, and condition metrics across all tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Unified Intelligence</h2>
+                <p class="section-subtitle">Revolutionary multi-agent orchestration that transforms how smart contract security is approached and delivered.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Multi-Agent Orchestration</h3>
+                        <p class="feature-description">Intelligent agents coordinate multiple auditing tools simultaneously, eliminating bottlenecks and maximizing parallel processing capabilities.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3 class="feature-title">Compressed Timelines</h3>
+                        <p class="feature-description">Transform weeks of sequential auditing into hours of parallel analysis. Our AI optimizes tool deployment for maximum time efficiency.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3 class="feature-title">Unified Integration</h3>
+                        <p class="feature-description">Seamlessly integrates static, dynamic, fuzzing, and mutation testing tools into one powerful interface with intelligent result correlation.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3 class="feature-title">Optimized Computing</h3>
+                        <p class="feature-description">Smart resource allocation and parallel processing reduce computational overhead while maintaining comprehensive security coverage.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3 class="feature-title">Intelligent Analysis</h3>
+                        <p class="feature-description">AI-powered correlation eliminates false positives and prioritizes critical vulnerabilities with context-aware risk assessment.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3 class="feature-title">Enterprise Ready</h3>
+                        <p class="feature-description">Scalable infrastructure designed for high-volume auditing with enterprise-grade security and compliance standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="email-capture">
+            <div class="container">
+                <h2 class="section-title">Join the Closed Beta</h2>
+                <p class="section-subtitle">Be among the first to experience the future of smart contract security. Get exclusive early access to WizAud's revolutionary platform.</p>
+                
+                <form class="email-form" action="https://formspree.io/f/mvgbjodj" method="POST" id="emailForm">
+                    <input 
+                        type="email" 
+                        name="email"
+                        class="email-input" 
+                        placeholder="Enter your email address" 
+                        required 
+                        id="emailInput"
+                    >
+                    <input type="hidden" name="_subject" value="New WizAud Closed Beta Signup">
+                    <input type="hidden" name="_next" value="">
+                    <button type="submit" class="notify-btn">Join Beta</button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    🚀 Welcome to the future! You'll be notified when WizAud launches.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // 3D Lattice Background
+        let scene, camera, renderer, lattice;
+        let points = [];
+        let lines = [];
+
+        function initLattice() {
+            // Scene setup
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer({ 
+                canvas: document.getElementById('lattice-canvas'), 
+                alpha: true,
+                antialias: true 
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x000000, 0);
+
+            // Create lattice structure
+            createLattice();
+            
+            // Position camera
+            camera.position.z = 15;
+            camera.position.y = 5;
+            camera.position.x = 5;
+
+            // Animation
+            animate();
+        }
+
+        function createLattice() {
+            const latticeGroup = new THREE.Group();
+            
+            // Lattice parameters - reduced density
+            const gridSize = 5;  // Reduced from 8 to 5
+            const spacing = 3;   // Increased from 2 to 3
+            const pointGeometry = new THREE.SphereGeometry(0.04, 8, 8);  // Slightly larger points
+            const pointMaterial = new THREE.MeshBasicMaterial({ 
+                color: 0x40e0d0,
+                transparent: true,
+                opacity: 0.9  // Increased opacity since fewer points
+            });
+
+            // Create points
+            for (let x = 0; x < gridSize; x++) {
+                for (let y = 0; y < gridSize; y++) {
+                    for (let z = 0; z < gridSize; z++) {
+                        const point = new THREE.Mesh(pointGeometry, pointMaterial);
+                        point.position.set(
+                            (x - gridSize/2) * spacing,
+                            (y - gridSize/2) * spacing,
+                            (z - gridSize/2) * spacing
+                        );
+                        
+                        // Store original position for animation
+                        point.userData.originalPosition = point.position.clone();
+                        point.userData.phase = Math.random() * Math.PI * 2;
+                        
+                        latticeGroup.add(point);
+                        points.push(point);
+                    }
+                }
+            }
+
+            // Create connections between nearby points
+            const lineMaterial = new THREE.LineBasicMaterial({ 
+                color: 0x00ced1, 
+                transparent: true, 
+                opacity: 0.5  // Slightly increased opacity
+            });
+
+            points.forEach((point, i) => {
+                points.forEach((otherPoint, j) => {
+                    if (i < j) {
+                        const distance = point.position.distanceTo(otherPoint.position);
+                        if (distance < spacing * 1.5) {
+                            const lineGeometry = new THREE.BufferGeometry();
+                            const positions = new Float32Array([
+                                point.position.x, point.position.y, point.position.z,
+                                otherPoint.position.x, otherPoint.position.y, otherPoint.position.z
+                            ]);
+                            lineGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                            
+                            const line = new THREE.Line(lineGeometry, lineMaterial);
+                            line.userData.point1 = point;
+                            line.userData.point2 = otherPoint;
+                            
+                            latticeGroup.add(line);
+                            lines.push(line);
+                        }
+                    }
+                });
+            });
+
+            scene.add(latticeGroup);
+            lattice = latticeGroup;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            const time = Date.now() * 0.001;
+
+            // Animate points
+            points.forEach((point, i) => {
+                const originalPos = point.userData.originalPosition;
+                const phase = point.userData.phase;
+                
+                point.position.x = originalPos.x + Math.sin(time + phase) * 0.3;
+                point.position.y = originalPos.y + Math.cos(time + phase * 1.5) * 0.3;
+                point.position.z = originalPos.z + Math.sin(time * 0.7 + phase * 2) * 0.3;
+            });
+
+            // Update line connections
+            lines.forEach(line => {
+                const positions = line.geometry.attributes.position.array;
+                const point1 = line.userData.point1;
+                const point2 = line.userData.point2;
+                
+                positions[0] = point1.position.x;
+                positions[1] = point1.position.y;
+                positions[2] = point1.position.z;
+                positions[3] = point2.position.x;
+                positions[4] = point2.position.y;
+                positions[5] = point2.position.z;
+                
+                line.geometry.attributes.position.needsUpdate = true;
+
+                // Dynamic opacity based on distance
+                const distance = point1.position.distanceTo(point2.position);
+                line.material.opacity = Math.max(0.1, 0.6 - distance * 0.1);
+            });
+
+            // Rotate entire lattice
+            if (lattice) {
+                lattice.rotation.x += 0.002;
+                lattice.rotation.y += 0.003;
+                lattice.rotation.z += 0.001;
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        // Handle window resize
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        // Initialize when page loads
+        window.addEventListener('load', initLattice);
+        window.addEventListener('resize', onWindowResize);
+
+        // Email form handling with Formspree
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            // Let Formspree handle the submission naturally
+            // Show success message after a short delay
+            setTimeout(() => {
+                const successMessage = document.getElementById('successMessage');
+                const form = document.getElementById('emailForm');
+                
+                // Check if we're back from Formspree (they handle the actual submission)
+                if (!window.location.search.includes('success')) {
+                    // Still on our page, show loading state
+                    const submitBtn = form.querySelector('.notify-btn');
+                    submitBtn.textContent = 'Submitting...';
+                    submitBtn.disabled = true;
+                }
+            }, 100);
+        });
+
+        // Handle success return from Formspree
+        if (window.location.search.includes('success')) {
+            const successMessage = document.getElementById('successMessage');
+            const form = document.getElementById('emailForm');
+            
+            successMessage.style.display = 'block';
+            form.style.display = 'none';
+            
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                form.style.display = 'flex';
+                document.getElementById('emailInput').value = '';
+                form.querySelector('.notify-btn').textContent = 'Join Beta';
+                form.querySelector('.notify-btn').disabled = false;
+            }, 4000);
+        }
+
+        // Add some interactive animations
+        document.querySelectorAll('.feature-card, .tool-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderColor = 'rgba(64, 224, 208, 0.8)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderColor = 'rgba(64, 224, 208, 0.3)';
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
