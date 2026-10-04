@@ -3,58 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
-    <title>WizAud - Smart Contract Security Revolution | AI-Powered Auditing Platform</title>
-    <meta name="description" content="WizAud revolutionizes smart contract security with multi-agent AI. Integrate Foundry, Slither, Echidna, and advanced fuzzing tools in one unified platform. Join our closed beta for enterprise-grade blockchain security.">
-    <meta name="keywords" content="smart contract audit, blockchain security, ethereum audit, solidity security, AI auditing, smart contract testing, defi security, foundry integration, slither analysis, echidna fuzzing, smart contract vulnerability">
+    <title>WizAud - Substrate-Agnostic Vulnerability Detection</title>
+    <meta name="description" content="WizAud models what makes code exploitable independently of the language it is written in. Security understanding gained in one ecosystem carries to every other.">
+    <meta name="keywords" content="smart contract security, vulnerability detection, substrate-agnostic, cross-chain knowledge transfer, cross-language learning, Solidity, Rust, Move, Go, Noir, Cairo, AI security analysis">
     <meta name="author" content="WizAud">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.wizaud.com">
-    
+
     <!-- Open Graph (Social Media) -->
-    <meta property="og:title" content="WizAud - Smart Contract Security Revolution">
-    <meta property="og:description" content="Multi-agent AI platform for comprehensive smart contract auditing. Compress timelines, maximize efficiency, eliminate vulnerabilities with integrated tools.">
+    <meta property="og:title" content="WizAud - Substrate-Agnostic Vulnerability Detection">
+    <meta property="og:description" content="WizAud models what makes code exploitable independently of the language it is written in. Security understanding gained in one ecosystem carries to every other.">
     <meta property="og:image" content="https://i.postimg.cc/0jFQNXVd/Wiz-Aud-logo.png">
     <meta property="og:url" content="https://www.wizaud.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WizAud">
-    
+
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WizAud - Smart Contract Security Revolution">
-    <meta name="twitter:description" content="AI-powered smart contract auditing platform with multi-agent orchestration. Enterprise-grade security for DeFi and blockchain projects.">
+    <meta name="twitter:title" content="WizAud - Substrate-Agnostic Vulnerability Detection">
+    <meta name="twitter:description" content="WizAud models what makes code exploitable independently of the language it is written in. Security understanding gained in one ecosystem carries to every other.">
     <meta name="twitter:image" content="https://i.postimg.cc/0jFQNXVd/Wiz-Aud-logo.png">
     <meta name="twitter:site" content="@WizAud">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/0jFQNXVd/Wiz-Aud-logo.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/0jFQNXVd/Wiz-Aud-logo.png">
     <link rel="apple-touch-icon" href="https://i.postimg.cc/0jFQNXVd/Wiz-Aud-logo.png">
     <meta name="theme-color" content="#40e0d0">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" as="script">
-    
+
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "WizAud",
-        "description": "AI-powered smart contract security auditing platform with multi-agent orchestration",
+        "description": "Substrate-agnostic vulnerability detection for smart contracts",
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "Web",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-        },
         "creator": {
             "@type": "Organization",
             "name": "WizAud"
@@ -64,11 +56,9 @@
     }
     </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 
         body {
             font-family: 'Exo 2', sans-serif;
@@ -77,15 +67,11 @@
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         /* Header */
         header {
-            padding: 20px 0;
+            padding: 16px 0;
             backdrop-filter: blur(10px);
             background: rgba(10, 26, 26, 0.9);
             position: fixed;
@@ -95,51 +81,33 @@
             border-bottom: 1px solid rgba(64, 224, 208, 0.3);
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
 
         .logo-icon {
-            width: 65px;
-            height: 65px;
+            width: 56px; height: 56px;
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(64, 224, 208, 0.4);
             animation: logoGlow 3s ease-in-out infinite;
+            flex-shrink: 0;
         }
 
         .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            width: 100%; height: 100%; object-fit: contain;
             filter: drop-shadow(0 0 8px rgba(64, 224, 208, 0.6));
         }
 
         @keyframes logoGlow {
-            0%, 100% { 
-                box-shadow: 0 0 20px rgba(64, 224, 208, 0.4);
-                transform: scale(1);
-            }
-            50% { 
-                box-shadow: 0 0 30px rgba(64, 224, 208, 0.8);
-                transform: scale(1.02);
-            }
+            0%, 100% { box-shadow: 0 0 20px rgba(64, 224, 208, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 30px rgba(64, 224, 208, 0.8); transform: scale(1.02); }
         }
 
         .logo-text {
             font-family: 'Orbitron', monospace;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
             background: linear-gradient(45deg, #40e0d0, #00ced1, #5f9ea0);
             background-size: 200% 200%;
@@ -154,35 +122,41 @@
             color: white;
             padding: 4px 12px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-left: 15px;
-            animation: pulse 2s ease-in-out infinite;
+            white-space: nowrap;
         }
+
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover { color: #40e0d0; }
 
         @keyframes gradientShift {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-            position: relative;
-        }
+        /* Hero */
+        .hero { padding: 150px 0 60px; text-align: center; position: relative; overflow: hidden; }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             background: radial-gradient(circle at 50% 50%, rgba(64, 224, 208, 0.15) 0%, transparent 70%);
             animation: pulse 4s ease-in-out infinite;
+            pointer-events: none;
         }
 
         @keyframes pulse {
@@ -190,14 +164,22 @@
             50% { opacity: 0.6; transform: scale(1.05); }
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        .hero-content { position: relative; z-index: 2; }
+
+        .eyebrow {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #40e0d0;
+            margin-bottom: 24px;
+            animation: fadeInUp 1s ease-out;
         }
 
         .hero h1 {
             font-family: 'Orbitron', monospace;
-            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-size: clamp(1.35rem, 6vw, 3.6rem);
+            overflow-wrap: anywhere;
             font-weight: 900;
             margin-bottom: 30px;
             background: linear-gradient(135deg, #ffffff 0%, #40e0d0 50%, #00ced1 100%);
@@ -209,146 +191,53 @@
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
+            font-size: clamp(1.05rem, 2.5vw, 1.35rem);
             color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 40px;
+            max-width: 820px;
+            line-height: 1.6;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 80px 0;
-        }
-
-        .stat-card {
-            background: rgba(64, 224, 208, 0.1);
-            border: 1px solid rgba(64, 224, 208, 0.3);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(64, 224, 208, 0.8);
-            box-shadow: 0 10px 30px rgba(64, 224, 208, 0.3);
-        }
-
-        .stat-number {
+        .hero-cta {
+            display: inline-block;
+            padding: 16px 36px;
             font-family: 'Orbitron', monospace;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #40e0d0;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #40e0d0, #00ced1);
+            color: #0a1a1a;
+            text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
 
-        /* Tools Section */
-        .tools-section {
+        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(64, 224, 208, 0.4); }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sections */
+        section { position: relative; }
+
+        .band {
             padding: 80px 0;
             background: rgba(64, 224, 208, 0.05);
             border-radius: 40px;
             margin: 80px 0;
         }
 
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .tool-card {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(64, 224, 208, 0.3);
-            border-radius: 20px;
-            padding: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(64, 224, 208, 0.2);
-        }
-
-        .tool-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .tool-logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #0a1a1a;
-            overflow: hidden;
-        }
-
-        .tool-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .tool-name {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #40e0d0;
-        }
-
-        .tool-type {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .tool-description {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-        }
+        .plain { padding: 80px 0; }
 
         .section-title {
             font-family: 'Orbitron', monospace;
             text-align: center;
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 5vw, 3rem);
             font-weight: 800;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #ffffff 0%, #40e0d0 100%);
@@ -359,87 +248,65 @@
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 60px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, rgba(64, 224, 208, 0.15) 0%, rgba(64, 224, 208, 0.05) 100%);
-            border: 1px solid rgba(64, 224, 208, 0.3);
-            border-radius: 24px;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(64, 224, 208, 0.2);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #40e0d0, #00ced1);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #0a1a1a;
-        }
-
-        .feature-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: white;
-        }
-
-        .feature-description {
-            color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto 60px;
+            max-width: 720px;
             line-height: 1.6;
         }
 
-        /* Email Capture Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(64, 224, 208, 0.15) 0%, rgba(64, 224, 208, 0.05) 100%);
+            border: 1px solid rgba(64, 224, 208, 0.3);
+            border-radius: 24px;
+            padding: 36px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(64, 224, 208, 0.8);
+            box-shadow: 0 20px 40px rgba(64, 224, 208, 0.2);
+        }
+
+        .card-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: white;
+        }
+
+        .card p { color: rgba(255, 255, 255, 0.8); line-height: 1.6; }
+
+        .status {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(64, 224, 208, 0.5);
+            color: #40e0d0;
+        }
+
+        .status.next { border-color: rgba(247, 147, 30, 0.6); color: #f7931e; }
+
+        /* Email Capture */
         .email-capture {
             padding: 80px 0;
             text-align: center;
             background: linear-gradient(135deg, rgba(64, 224, 208, 0.15) 0%, rgba(0, 206, 209, 0.15) 100%);
+            border: 1px solid rgba(64, 224, 208, 0.5);
             border-radius: 40px;
             margin: 80px 0;
-            position: relative;
-        }
-
-        .email-capture::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #40e0d0, #00ced1, #5f9ea0, #40e0d0);
-            border-radius: 42px;
-            z-index: -1;
-            animation: borderRotate 3s linear infinite;
-        }
-
-        @keyframes borderRotate {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
         }
 
         .email-form {
@@ -453,11 +320,10 @@
 
         .email-input {
             flex: 1;
-            min-width: 280px;
+            min-width: 260px;
             padding: 16px 24px;
             font-size: 16px;
             font-family: 'Exo 2', sans-serif;
-            border: none;
             border-radius: 50px;
             background: rgba(255, 255, 255, 0.1);
             color: white;
@@ -472,9 +338,7 @@
             box-shadow: 0 0 20px rgba(64, 224, 208, 0.3);
         }
 
-        .email-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
+        .email-input::placeholder { color: rgba(255, 255, 255, 0.6); }
 
         .notify-btn {
             padding: 16px 32px;
@@ -491,13 +355,12 @@
             letter-spacing: 1px;
         }
 
-        .notify-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(64, 224, 208, 0.4);
-        }
+        .notify-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(64, 224, 208, 0.4); }
+        .notify-btn:disabled { opacity: 0.6; cursor: default; transform: none; }
 
         .success-message {
-            margin-top: 20px;
+            margin: 20px auto 0;
+            max-width: 500px;
             padding: 15px 25px;
             background: rgba(64, 224, 208, 0.2);
             border: 1px solid rgba(64, 224, 208, 0.5);
@@ -507,42 +370,66 @@
             display: none;
         }
 
-        /* 3D Lattice Container */
+        .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.4s both; }
+        .hero-actions .hero-cta { animation: none; }
+
+        .proof {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 22px 28px;
+            border-left: 3px solid #40e0d0;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 0 16px 16px 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        #transfer .section-subtitle { margin-bottom: 36px; }
+        #capabilities .section-title { margin-bottom: 50px; }
+        .card .status { margin-top: 0; }
+        .status.muted { border-color: rgba(255, 255, 255, 0.4); color: rgba(255, 255, 255, 0.75); }
+        .langs { list-style: none; margin-top: 22px; display: grid; gap: 10px; }
+        .langs li { font-family: 'Orbitron', monospace; font-size: 1.3rem; font-weight: 700; color: white; }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px 50px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* Background graph */
         .lattice-container {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             z-index: -1;
             opacity: 0.3;
         }
 
-        #lattice-canvas {
-            width: 100%;
-            height: 100%;
+        #lattice-canvas { width: 100%; height: 100%; }
+
+        @media (max-width: 860px) {
+            .nav-links { display: none; }
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .email-form {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .email-input {
-                min-width: auto;
-                width: 100%;
-            }
-            
-            .features-grid, .tools-grid {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 600px) {
+            .logo-icon { width: 44px; height: 44px; border-radius: 12px; }
+            .logo-text { font-size: 22px; }
+            .hero { padding-top: 120px; }
+            .band, .email-capture { border-radius: 28px; margin: 50px 0; padding: 56px 0; }
+            .plain { padding: 50px 0; }
+            .card { padding: 28px; }
+            .email-form { flex-direction: column; align-items: stretch; }
+            .email-input { min-width: 0; width: 100%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            html { scroll-behavior: auto; }
         }
     </style>
 </head>
 <body>
-    <!-- Dynamic 3D Lattice Background -->
     <div class="lattice-container">
         <canvas id="lattice-canvas"></canvas>
     </div>
@@ -554,8 +441,14 @@
                     <img src="https://i.postimg.cc/0jFQNXVd/Wiz-Aud-logo.png" alt="WizAud Logo" />
                 </div>
                 <div class="logo-text">WizAud</div>
-                <div class="beta-badge">Closed Beta</div>
+                <div class="beta-badge">Closed Alpha</div>
             </div>
+            <ul class="nav-links">
+                <li><a href="#transfer">Knowledge transfer</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#access">Alpha access</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -563,402 +456,252 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Smart Contract Security<br>Revolution</h1>
-                    <p class="hero-subtitle">Deploy multi-agent AI that integrates and optimizes multiple smart contract auditing tools into one unified platform. Compress timelines, maximize efficiency, eliminate vulnerabilities.</p>
-                    
-                    <div class="stats">
-                        <div class="stat-card">
-                            <div class="stat-number">10x</div>
-                            <div class="stat-label">Faster Audits</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">99.9%</div>
-                            <div class="stat-label">Accuracy Rate</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">85%</div>
-                            <div class="stat-label">Cost Reduction</div>
-                        </div>
+                    <p class="eyebrow">AI security analysis for smart contracts</p>
+                    <h1>Substrate-Agnostic<br>Vulnerability Detection</h1>
+                    <p class="hero-subtitle">WizAud models what makes code exploitable independently of the language it is written in. Understanding gained in one ecosystem carries to every other.</p>
+                    <div class="hero-actions">
+                        <a class="hero-cta" href="#access">Request Alpha Access</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="tools-section">
+        <section class="band" id="transfer">
             <div class="container">
-                <h2 class="section-title">Full Foundry Integration & Security Arsenal</h2>
-                <p class="section-subtitle">Our multi-agent AI orchestrates industry-leading development and auditing tools, creating comprehensive security coverage through foundry integration, static analysis, dynamic testing, advanced fuzzing, and mutation testing.</p>
-                
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <div class="tool-logo">
-                                <img src="https://i.postimg.cc/9QYtSy8F/99892494.png" alt="Foundry Logo" />
-                            </div>
-                            <div>
-                                <div class="tool-name">Foundry</div>
-                                <div class="tool-type">Development Toolkit</div>
-                            </div>
-                        </div>
-                        <p class="tool-description">Fast, portable and modular toolkit for Ethereum application development with native testing, deployment, and interaction capabilities.</p>
-                    </div>
+                <h2 class="section-title">Cross-Chain Knowledge Transfer</h2>
+                <p class="section-subtitle">Security experience does not stay on the chain it was gained on. WizAud carries what it learns in one ecosystem into every other.</p>
+                <p class="proof">In a held-out test, a version trained with no exposure to the target language still located high-severity issues in it.</p>
+            </div>
+        </section>
 
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <div class="tool-logo">
-                                <img src="https://i.postimg.cc/7LPMybd1/1-8v-Wy-ODlm5-Rl-D-Nv-Y0-WA41-A.png" alt="Slither Logo" />
-                            </div>
-                            <div>
-                                <div class="tool-name">Slither</div>
-                                <div class="tool-type">Static Analysis Framework</div>
-                            </div>
-                        </div>
-                        <p class="tool-description">Python-based static analyzer that detects vulnerabilities and provides visual contract information in seconds.</p>
+        <section class="plain" id="capabilities">
+            <div class="container">
+                <h2 class="section-title">Capabilities</h2>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3 class="card-title">Coverage Without Audit History</h3>
+                        <p>New languages have little audit history to learn from. Through cross-language learning, WizAud brings experience from mature ecosystems to code that has never had it.</p>
                     </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <div class="tool-logo">
-                                <img src="https://i.postimg.cc/L6fVtcjP/Screenshot-2025-09-16-141645.png" alt="Octopus Logo" />
-                            </div>
-                            <div>
-                                <div class="tool-name">Octopus</div>
-                                <div class="tool-type">Dynamic Analysis (Fuzzinglab)</div>
-                            </div>
-                        </div>
-                        <p class="tool-description">Fuzzinglab's security analysis framework for blockchain smart contracts and WebAssembly modules with CFG visualization.</p>
+                    <div class="card">
+                        <h3 class="card-title">Targeted Analysis</h3>
+                        <p>Reading an entire codebase with a language model is slow and expensive. WizAud first identifies the regions most likely to be exploitable, then directs deep analysis only there, so compute goes where the risk is.</p>
                     </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <div class="tool-logo">
-                                <img src="https://i.postimg.cc/gkV439P7/Echidna-logo.png" alt="Echidna Logo" />
-                            </div>
-                            <div>
-                                <div class="tool-name">Echidna Engine</div>
-                                <div class="tool-type">Proprietary Fuzzing FaaS</div>
-                            </div>
-                        </div>
-                        <p class="tool-description">Enhanced Fuzzing-as-a-Service platform with sophisticated grammar-based testing and property-based vulnerability detection.</p>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <div class="tool-logo">
-                                <img src="https://i.postimg.cc/9fMp3rq3/medusa-logo.png" alt="Medusa Logo" />
-                            </div>
-                            <div>
-                                <div class="tool-name">Medusa Framework</div>
-                                <div class="tool-type">Advanced Fuzzing Engine</div>
-                            </div>
-                        </div>
-                        <p class="tool-description">Next-generation fuzzing with intelligent test case generation, parallel processing, and automated minimization.</p>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <div class="tool-logo">
-                                <img src="https://i.postimg.cc/NMXRYTsn/Slitherin-logo.png" alt="Slitherin Logo" />
-                            </div>
-                            <div>
-                                <div class="tool-name">Slitherin</div>
-                                <div class="tool-type">Mutation Testing</div>
-                            </div>
-                        </div>
-                        <p class="tool-description">Advanced mutation testing framework that validates test suite effectiveness through controlled code modifications.</p>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <div class="tool-logo">
-                                <img src="https://i.postimg.cc/VkLf88sQ/Wizkid.png" alt="Wizkid Logo" />
-                            </div>
-                            <div>
-                                <div class="tool-name">Wizkid</div>
-                                <div class="tool-type">Coverage Analysis</div>
-                            </div>
-                        </div>
-                        <p class="tool-description">Proprietary comprehensive coverage aggregator providing unified line, branch, function, and condition metrics across all tools.</p>
+                    <div class="card">
+                        <h3 class="card-title">Confidence-Ranked Leads</h3>
+                        <p>Every lead is ranked by confidence and labelled with where the knowledge behind it came from. Your team sees the strongest signals first and decides how deep to go, without wading through noise.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="features">
+        <section class="band" id="languages">
             <div class="container">
-                <h2 class="section-title">Unified Intelligence</h2>
-                <p class="section-subtitle">Revolutionary multi-agent orchestration that transforms how smart contract security is approached and delivered.</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3 class="feature-title">Multi-Agent Orchestration</h3>
-                        <p class="feature-description">Intelligent agents coordinate multiple auditing tools simultaneously, eliminating bottlenecks and maximizing parallel processing capabilities.</p>
+                <h2 class="section-title">Supported Languages</h2>
+                <p class="section-subtitle">Cross-language learning means each language WizAud covers strengthens the others.</p>
+
+                <div class="grid">
+                    <div class="card">
+                        <span class="status">Closed alpha</span>
+                        <ul class="langs">
+                            <li>Solidity</li>
+                            <li>Rust</li>
+                        </ul>
                     </div>
-                    
-                    <div class="feature-card">
-                        <h3 class="feature-title">Compressed Timelines</h3>
-                        <p class="feature-description">Transform weeks of sequential auditing into hours of parallel analysis. Our AI optimizes tool deployment for maximum time efficiency.</p>
+                    <div class="card">
+                        <span class="status next">Internal testing</span>
+                        <ul class="langs">
+                            <li>Go</li>
+                            <li>Move</li>
+                            <li>JavaScript</li>
+                        </ul>
                     </div>
-                    
-                    <div class="feature-card">
-                        <h3 class="feature-title">Unified Integration</h3>
-                        <p class="feature-description">Seamlessly integrates static, dynamic, fuzzing, and mutation testing tools into one powerful interface with intelligent result correlation.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h3 class="feature-title">Optimized Computing</h3>
-                        <p class="feature-description">Smart resource allocation and parallel processing reduce computational overhead while maintaining comprehensive security coverage.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h3 class="feature-title">Intelligent Analysis</h3>
-                        <p class="feature-description">AI-powered correlation eliminates false positives and prioritizes critical vulnerabilities with context-aware risk assessment.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <h3 class="feature-title">Enterprise Ready</h3>
-                        <p class="feature-description">Scalable infrastructure designed for high-volume auditing with enterprise-grade security and compliance standards.</p>
+                    <div class="card">
+                        <span class="status muted">Exploratory testing</span>
+                        <ul class="langs">
+                            <li>Noir</li>
+                            <li>Cairo</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="email-capture">
+        <section class="email-capture" id="access">
             <div class="container">
-                <h2 class="section-title">Join the Closed Beta</h2>
-                <p class="section-subtitle">Be among the first to experience the future of smart contract security. Get exclusive early access to WizAud's revolutionary platform.</p>
-                
+                <h2 class="section-title">Request Alpha Access</h2>
+                <p class="section-subtitle">We are speaking with a small number of audit firms and protocol teams. Leave your email and we will reach out.</p>
+
                 <form class="email-form" action="https://formspree.io/f/mvgbjodj" method="POST" id="emailForm">
-                    <input 
-                        type="email" 
+                    <input
+                        type="email"
                         name="email"
-                        class="email-input" 
-                        placeholder="Enter your email address" 
-                        required 
+                        class="email-input"
+                        placeholder="Enter your work email"
+                        aria-label="Email address"
+                        required
                         id="emailInput"
                     >
-                    <input type="hidden" name="_subject" value="New WizAud Closed Beta Signup">
-                    <input type="hidden" name="_next" value="">
-                    <button type="submit" class="notify-btn">Join Beta</button>
+                    <input type="hidden" name="_subject" value="New WizAud Alpha Access Request">
+                    <button type="submit" class="notify-btn">Request Alpha Access</button>
                 </form>
-                
-                <div class="success-message" id="successMessage">
-                    🚀 Welcome to the future! You'll be notified when WizAud launches.
+
+                <div class="success-message" id="successMessage" role="status">
+                    Thanks. We'll be in touch.
                 </div>
             </div>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; <span id="year"></span> WizAud</p>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-        // 3D Lattice Background
+        // Animated graph background
         let scene, camera, renderer, lattice;
-        let points = [];
-        let lines = [];
+        const points = [];
+        const lines = [];
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         function initLattice() {
-            // Scene setup
+            if (typeof THREE === 'undefined') return;
             scene = new THREE.Scene();
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            renderer = new THREE.WebGLRenderer({ 
-                canvas: document.getElementById('lattice-canvas'), 
+            renderer = new THREE.WebGLRenderer({
+                canvas: document.getElementById('lattice-canvas'),
                 alpha: true,
-                antialias: true 
+                antialias: true
             });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setClearColor(0x000000, 0);
 
-            // Create lattice structure
             createLattice();
-            
-            // Position camera
-            camera.position.z = 15;
-            camera.position.y = 5;
-            camera.position.x = 5;
+            camera.position.set(5, 5, 15);
 
-            // Animation
-            animate();
+            if (reduceMotion) { renderer.render(scene, camera); } else { animate(); }
         }
 
         function createLattice() {
-            const latticeGroup = new THREE.Group();
-            
-            // Lattice parameters - reduced density
-            const gridSize = 5;  // Reduced from 8 to 5
-            const spacing = 3;   // Increased from 2 to 3
-            const pointGeometry = new THREE.SphereGeometry(0.04, 8, 8);  // Slightly larger points
-            const pointMaterial = new THREE.MeshBasicMaterial({ 
-                color: 0x40e0d0,
-                transparent: true,
-                opacity: 0.9  // Increased opacity since fewer points
-            });
+            const group = new THREE.Group();
+            const gridSize = 5;
+            const spacing = 3;
+            const geometry = new THREE.SphereGeometry(0.05, 8, 8);
+            const materials = [
+                new THREE.MeshBasicMaterial({ color: 0x40e0d0, transparent: true, opacity: 0.9 }),
+                new THREE.MeshBasicMaterial({ color: 0xf7931e, transparent: true, opacity: 0.9 })
+            ];
 
-            // Create points
             for (let x = 0; x < gridSize; x++) {
                 for (let y = 0; y < gridSize; y++) {
                     for (let z = 0; z < gridSize; z++) {
-                        const point = new THREE.Mesh(pointGeometry, pointMaterial);
+                        const point = new THREE.Mesh(geometry, materials[Math.random() < 0.5 ? 0 : 1]);
                         point.position.set(
-                            (x - gridSize/2) * spacing,
-                            (y - gridSize/2) * spacing,
-                            (z - gridSize/2) * spacing
+                            (x - gridSize / 2) * spacing,
+                            (y - gridSize / 2) * spacing,
+                            (z - gridSize / 2) * spacing
                         );
-                        
-                        // Store original position for animation
                         point.userData.originalPosition = point.position.clone();
                         point.userData.phase = Math.random() * Math.PI * 2;
-                        
-                        latticeGroup.add(point);
+                        group.add(point);
                         points.push(point);
                     }
                 }
             }
 
-            // Create connections between nearby points
-            const lineMaterial = new THREE.LineBasicMaterial({ 
-                color: 0x00ced1, 
-                transparent: true, 
-                opacity: 0.5  // Slightly increased opacity
-            });
+            const lineMaterial = new THREE.LineBasicMaterial({ color: 0x00ced1, transparent: true, opacity: 0.4 });
 
-            points.forEach((point, i) => {
-                points.forEach((otherPoint, j) => {
-                    if (i < j) {
-                        const distance = point.position.distanceTo(otherPoint.position);
-                        if (distance < spacing * 1.5) {
-                            const lineGeometry = new THREE.BufferGeometry();
-                            const positions = new Float32Array([
-                                point.position.x, point.position.y, point.position.z,
-                                otherPoint.position.x, otherPoint.position.y, otherPoint.position.z
-                            ]);
-                            lineGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-                            
-                            const line = new THREE.Line(lineGeometry, lineMaterial);
-                            line.userData.point1 = point;
-                            line.userData.point2 = otherPoint;
-                            
-                            latticeGroup.add(line);
-                            lines.push(line);
-                        }
+            for (let i = 0; i < points.length; i++) {
+                for (let j = i + 1; j < points.length; j++) {
+                    const a = points[i], b = points[j];
+                    if (a.position.distanceTo(b.position) < spacing * 1.5) {
+                        const g = new THREE.BufferGeometry();
+                        g.setAttribute('position', new THREE.BufferAttribute(new Float32Array(6), 3));
+                        const line = new THREE.Line(g, lineMaterial);
+                        line.userData.a = a;
+                        line.userData.b = b;
+                        group.add(line);
+                        lines.push(line);
                     }
-                });
-            });
+                }
+            }
 
-            scene.add(latticeGroup);
-            lattice = latticeGroup;
+            updateLines();
+            scene.add(group);
+            lattice = group;
+        }
+
+        function updateLines() {
+            lines.forEach(line => {
+                const p = line.geometry.attributes.position.array;
+                const a = line.userData.a.position, b = line.userData.b.position;
+                p[0] = a.x; p[1] = a.y; p[2] = a.z;
+                p[3] = b.x; p[4] = b.y; p[5] = b.z;
+                line.geometry.attributes.position.needsUpdate = true;
+            });
         }
 
         function animate() {
             requestAnimationFrame(animate);
-
             const time = Date.now() * 0.001;
 
-            // Animate points
-            points.forEach((point, i) => {
-                const originalPos = point.userData.originalPosition;
+            points.forEach(point => {
+                const o = point.userData.originalPosition;
                 const phase = point.userData.phase;
-                
-                point.position.x = originalPos.x + Math.sin(time + phase) * 0.3;
-                point.position.y = originalPos.y + Math.cos(time + phase * 1.5) * 0.3;
-                point.position.z = originalPos.z + Math.sin(time * 0.7 + phase * 2) * 0.3;
+                point.position.x = o.x + Math.sin(time + phase) * 0.3;
+                point.position.y = o.y + Math.cos(time + phase * 1.5) * 0.3;
+                point.position.z = o.z + Math.sin(time * 0.7 + phase * 2) * 0.3;
             });
 
-            // Update line connections
-            lines.forEach(line => {
-                const positions = line.geometry.attributes.position.array;
-                const point1 = line.userData.point1;
-                const point2 = line.userData.point2;
-                
-                positions[0] = point1.position.x;
-                positions[1] = point1.position.y;
-                positions[2] = point1.position.z;
-                positions[3] = point2.position.x;
-                positions[4] = point2.position.y;
-                positions[5] = point2.position.z;
-                
-                line.geometry.attributes.position.needsUpdate = true;
+            updateLines();
 
-                // Dynamic opacity based on distance
-                const distance = point1.position.distanceTo(point2.position);
-                line.material.opacity = Math.max(0.1, 0.6 - distance * 0.1);
-            });
-
-            // Rotate entire lattice
-            if (lattice) {
-                lattice.rotation.x += 0.002;
-                lattice.rotation.y += 0.003;
-                lattice.rotation.z += 0.001;
-            }
+            lattice.rotation.x += 0.002;
+            lattice.rotation.y += 0.003;
+            lattice.rotation.z += 0.001;
 
             renderer.render(scene, camera);
         }
 
-        // Handle window resize
         function onWindowResize() {
+            if (!renderer) return;
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
+            if (reduceMotion) renderer.render(scene, camera);
         }
 
-        // Initialize when page loads
         window.addEventListener('load', initLattice);
         window.addEventListener('resize', onWindowResize);
 
-        // Email form handling with Formspree
-        document.getElementById('emailForm').addEventListener('submit', function(e) {
-            // Let Formspree handle the submission naturally
-            // Show success message after a short delay
-            setTimeout(() => {
-                const successMessage = document.getElementById('successMessage');
-                const form = document.getElementById('emailForm');
-                
-                // Check if we're back from Formspree (they handle the actual submission)
-                if (!window.location.search.includes('success')) {
-                    // Still on our page, show loading state
-                    const submitBtn = form.querySelector('.notify-btn');
-                    submitBtn.textContent = 'Submitting...';
-                    submitBtn.disabled = true;
-                }
-            }, 100);
-        });
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Handle success return from Formspree
-        if (window.location.search.includes('success')) {
-            const successMessage = document.getElementById('successMessage');
-            const form = document.getElementById('emailForm');
-            
-            successMessage.style.display = 'block';
-            form.style.display = 'none';
-            
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-                form.style.display = 'flex';
-                document.getElementById('emailInput').value = '';
-                form.querySelector('.notify-btn').textContent = 'Join Beta';
-                form.querySelector('.notify-btn').disabled = false;
-            }, 4000);
-        }
+        // Alpha-access form: submit to Formspree in place, no page redirect
+        const form = document.getElementById('emailForm');
+        const successMessage = document.getElementById('successMessage');
 
-        // Add some interactive animations
-        document.querySelectorAll('.feature-card, .tool-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.borderColor = 'rgba(64, 224, 208, 0.8)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.borderColor = 'rgba(64, 224, 208, 0.3)';
-            });
-        });
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const btn = form.querySelector('.notify-btn');
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
                 });
-            });
+                if (!res.ok) throw new Error('Request failed');
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+            } catch (err) {
+                btn.textContent = 'Try again';
+                btn.disabled = false;
+            }
         });
     </script>
 </body>
 </html>
+
